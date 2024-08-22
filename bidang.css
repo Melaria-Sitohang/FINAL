@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #b3e8ff;
+    padding: 20px; /* Sesuaikan padding jika perlu */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Posisikan logo di atas dan logout di bawah */
+    align-items: center; /* Pusatkan konten secara horizontal */
+}
+
+.profile-container {
+    position: absolute; /* Posisi absolut untuk foto profil */
+    top: 10px; /* Jarak dari atas */
+    right: 15px; /* Jarak dari kanan */
+}
+
+.profile-picture {
+    width: 50px; /* Sesuaikan ukuran foto profil */
+    height: 50px; /* Sesuaikan ukuran foto profil */
+    border-radius: 50%; /* Membuat foto profil menjadi bulat */
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 10px; /* Jarak antara logo dan teks di bawah*/
+}
+
+.logo img {
+    width: 300px; /* Atur lebar logo */
+    height: auto; /* Jaga rasio aspek gambar */
+}
+
+.logo h2 {
+    font-size: 20px; /* Ukuran teks di bawah logo */
+    margin: 10px 0; /* Jarak antara logo dan teks */
+    text-align: center;
+    color: #061D4A; /* Ganti dengan warna yang diinginkan */
+}
+
+.beranda {
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s; /* Tambahkan efek transisi */
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.beranda.active {
+    background-color: #061D4A; /* Warna background saat aktif */
+    color: #ffffff; /* Warna teks saat aktif */
+    border-radius: 5px; /* Tambahkan border-radius jika diinginkan */
+}
+
+.logout-button {
+    background-color: #77c5ff;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: auto; /* Pastikan logout button berada di bawah */
+    border-radius: 5px;
+}
+
+.logout-button:active {
+    background-color: #061D4A; /* Warna latar belakang saat diklik */
+    color: #ffffff; /* Warna teks saat diklik */
+    transform: scale(0.98); /* Sedikit mengecilkan elemen saat diklik */
+}
+
+.main-content {
+    width: 75%;
+    padding: 50px;
+    background-color: #ffffff;
+}
+
+.main-content h2 {
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.main-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.main-content ul li {
+    background-color: #B2ECE8;
+    color: #000000;
+    padding: 11px 5px;
+    margin-bottom: 35px;
+    font-size: 18px;
+    border-radius: 8px;
+    text-align: center;
+    height: 40px; /* Atur tinggi tetap, misalnya 40px */
+    display: flex;
+    align-items: center; /* Pastikan teks berada di tengah secara vertikal */
+    justify-content: center;
+}
+
+.main-content ul li:hover {
+    background-color: #ffffff; /* Ubah warna saat hover */
+    transform: scale(1.02); /* Sedikit memperbesar elemen saat hover */
+}
+
+/* Efek saat elemen diklik */
+.main-content ul li:active {
+    background-color: #061D4A; /* Ubah warna saat diklik */
+    transform: scale(0.98); /* Sedikit mengecilkan elemen saat diklik */
+}

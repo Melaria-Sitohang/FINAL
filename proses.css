@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh; /* Membuat body mengisi penuh tinggi viewport */
+}
+
+.container {
+    display: flex;
+    height: 100%; /* Memastikan container mengisi penuh tinggi body */
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #B4EDFF;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.profile-container {
+    position: absolute; /* Posisi absolut untuk meletakkan foto profil di kanan atas */
+    top: 10px;          /* Jarak dari atas */
+    right: 15px;        /* Jarak dari kanan */
+}
+
+.profile-picture {
+    width: 50px;        /* Atur lebar foto profil */
+    height: 50px;       /* Atur tinggi foto profil */
+    border-radius: 50%; /* Membuat gambar berbentuk bulat */
+    object-fit: cover;  /* Menjaga rasio aspek gambar */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center; /* Menyelaraskan logo di tengah */
+    margin-bottom: 10px; /* Mengatur jarak bawah antara logo dan teks */
+}
+
+.logo {
+    width: 100%; /* Mengisi lebar container logo */
+    max-width: 300px; /* Menyesuaikan ukuran maksimum logo */
+    height: auto; /* Menjaga rasio aspek gambar */
+    object-fit: contain;
+}
+
+.sidebar .title {
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+    color: #061D4A;
+    font-weight: bold;
+    margin-top: 5px; /* Menetapkan jarak atas yang lebih kecil */
+}
+
+.sidebar .subtitle {
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+    color: #061D4A;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.menu {
+    width: 80%;
+    margin: 15px 15px 15px 20px; /* Jarak atas, kanan, bawah, dan kiri */
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.logout-container {
+    position: absolute; /* Posisi absolut untuk memindahkan logout ke bawah */
+    bottom: 20px; /* Jarak dari bawah */
+    width: 100%; /* Memastikan tombol logout lebar penuh */
+    display: flex;
+    justify-content: center; /* Menyelaraskan tombol logout di tengah */
+    margin-left: -30px;
+}
+
+.logout {
+    background-color: #5BB1F9; /* Warna latar belakang tombol logout */
+    color: white; /* Warna teks tombol logout */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.logout:hover {
+    background-color: blue; /* Warna latar belakang tombol logout saat hover */
+}
+
+.content {
+    flex-grow: 1;
+    padding: 50px;
+}
+
+.content h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.upload-input-container {
+    width: 100%; /* Mengatur lebar kontainer agar mengisi penuh dari container induknya */
+    position: relative; /* Menetapkan posisi relatif agar input bisa diposisikan dengan absolut jika diperlukan */
+}
+
+.upload-input {
+    width: calc(100% + 450px); /* Memperpanjang input ke arah kanan dengan 50px tambahan */
+    max-width: none; /* Menghapus batas maksimum lebar jika ada */
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #000080;
+    border-radius: 10px;
+    box-sizing: border-box; /* Memastikan padding dan border dihitung dalam lebar total */
+}
+
+.status {
+    font-size: 14px;
+    color: gray;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.action-button {
+    background-color: #b3eaff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background-color: #80d4ff;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Surat</title>
+    <link rel="stylesheet" href="datasurat.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="logo.png" alt="SIATAN Logo">
+            </div>
+            <h1>SISTEM INFORMASI ARSIP KESEHATAN</h1>
+            <button class="menu-button">Sekretariat</button>
+            <button class="menu-button">Kesehatan Masyarakat</button>
+            <button class="menu-button">Pencegahan dan Pengendalian Penyakit</button>
+            <button class="menu-button">Pelayanan Kesehatan</button>
+            <button class="menu-button">Sumber Daya Kesehatan</button>
+            <button class="logout-button">logout</button>
+        </div>
+
+        <div class="content">
+            <h2>Data Surat</h2>
+            <div class="form-group">
+                <label for="category">Perencanaan dan evaluasi</label>
+                <select id="category">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                </select>
+            </div>
+            <div class="search-group">
+                <input type="text" placeholder="surat masuk">
+                <input type="text" placeholder="surat dinas">
+                <input type="text" placeholder="10/09/2024">
+                <button>Cari</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Jenis surat</th>
+                        <th>Nama Surat</th>
+                        <th>Tanggal Upload</th>
+                        <th>opsi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>surat masuk</td>
+                        <td>surat dinas</td>
+                        <td>10/09/2024</td>
+                        <td>
+                            <button class="btn-option">hapus</button>
+                            <button class="btn-option">detail</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>surat masuk</td>
+                        <td>surat dinas</td>
+                        <td>10/09/2024</td>
+                        <td>
+                            <button class="btn-option">hapus</button>
+                            <button class="btn-option">detail</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

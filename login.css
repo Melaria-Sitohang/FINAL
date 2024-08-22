@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+.container {
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 900px; 
+}
+
+.logo-section {
+    background-color: #ffffff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+}
+
+.logo-section img {
+    width: 450px;
+    height: auto;
+}
+
+.logo-section h1 {
+    font-size: 36px;
+    color: #007bff;
+    margin: 10px 0 5px;
+}
+
+.logo-section .subtext {
+    font-size: 2em; /* Ubah ukuran font di sini untuk memperbesar teks */
+    color: #061D4A;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.form-section {
+    background-color: #76C3EE;
+    padding: 40px;
+    width: 50%;
+}
+
+.form-wrapper {
+    background-color: #ffffff; /* Latar belakang putih */
+    padding: 30px; /* Jarak dalam (padding) di sekitar konten */
+    border-radius: 10px; /* Sudut bulat pada kotak */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan pada kotak */
+}
+
+form h2 {
+    margin-bottom: 30px;
+    color: #061D4A;
+    text-align: center;
+}
+
+label {
+    margin: 10px 0 5px;
+    color: #000;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%; /* Buat input selebar kotak */
+}
+
+button {
+    padding: 10px 50px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%; /* Buat tombol selebar kotak */
+    margin-top: 20px;
+}
+
+input:focus, button:focus {
+    outline: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+form p {
+    margin-top: 20px; 
+    text-align: center;
+    color: #000;
+}
+
+form p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+form p a:hover {
+    text-decoration: underline;
+}
+

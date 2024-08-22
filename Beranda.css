@@ -1,0 +1,246 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #90CAF9;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    height: 70px; /* Tetapkan tinggi header tetap */
+    overflow: hidden; /* Sembunyikan elemen yang melampaui batas */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; /* Pastikan container menyesuaikan tinggi header */
+}
+
+.logo img {
+    max-width: 400px; /* Sesuaikan ukuran maksimum logo */
+    height: auto; /* Pertahankan proporsi gambar */
+    margin-left: -50px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    transform: translateX(-15px);
+}
+
+nav ul li {
+    margin-left: 50px;
+}
+
+.nav-link {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-bottom: 3px solid transparent; /* Border transparan sebagai default */
+    transition: border-bottom-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link.active {
+    border-bottom-color: #004080; /* Warna border saat aktif */
+    color: #004080; /* Warna teks saat aktif */
+}
+
+.nav-link:hover {
+    border-bottom-color: white; /* Warna border saat di-hover */
+    color: #004080; /* Warna teks saat di-hover */
+}
+
+.profile {
+    margin-left: 40px; /* Menambahkan jarak antara link dan gambar profil */
+}
+
+.profile-pic {
+    width: 40px; /* Sesuaikan ukuran gambar profil */
+    height: 40px; /* Sesuaikan ukuran gambar profil */
+    border-radius: 50%; /* Membuat gambar profil menjadi lingkaran */
+}
+
+main {
+    padding: 20px;
+}
+
+.photo-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.arsip-photo {
+    width: 550px; /* Sesuaikan lebar foto sesuai kebutuhan */
+    height: auto; /* Pertahankan proporsi foto */
+    margin-left: 20px; /* Jarak antara gambar arsip dan konten lainnya */
+    object-fit: cover; /* Pastikan gambar tetap proporsional */
+    margin-left: -30px;
+}
+
+.si-atan-content {
+    display: flex;
+    flex-direction: column; /* Susun gambar dan teks secara vertikal */
+    align-items: flex-start; /* Geser gambar dan teks ke kiri */
+}
+
+.si-atan-photo {
+    width: 750px; /* Atur lebar gambar sama */
+    height: auto; /* Biarkan tinggi menyesuaikan proporsional */
+    border-radius: 10px; 
+}
+
+.text-content {
+    text-align: center; /* Pusatkan teks di bawah gambar */
+}
+
+.text-content h1 {
+    font-size: 3em; /* Ukuran font yang diperbesar */
+    font-weight: bolder; /* Extra bold */
+    font-style: italic; /* Italic */
+    margin: 0;
+    margin-left: 150px; /* Geser teks h1 ke kanan */
+    color: #061D4A
+}
+
+.text-content h2 {
+    font-size: 3em; /* Ukuran font yang diperbesar */
+    font-weight: bolder; /* Extra bold */
+    font-style: italic; /* Italic */
+    margin: 0;
+    margin-left: 150px; /* Geser teks h1 ke kanan */
+    color: #061D4A
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.feature-box {
+    width: 20%;
+    text-align: center;
+    padding: 10px;
+    background-color: #76C3EE;
+    border-radius: 10px;
+    margin-top: 80px;
+}
+
+.feature-box h3 {
+    color: #000;
+    font-size: 1.4em;
+}
+
+.feature-box p {
+    color: #000;
+    font-size: 1.2em;
+}
+
+.services-section {
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px; /* Jarak antara judul dan kotak servis */
+}
+
+.section-title h2 {
+    font-size: 2em; /* Ukuran font yang diperbesar */
+    font-weight: bold; /* Menebalkan teks */
+    color: #061D4A; /* Warna teks yang diubah */
+    margin: 0;
+}
+
+.services {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px; /* Jarak atas jika diperlukan */
+}
+
+.service-box {
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    padding: 10px;
+}
+
+.image-wrapper {
+    display: inline-block;
+    padding: 10px;
+    border: 3px solid #01579B; /* Garis kotak */
+    border-radius: 10px; /* Sudut kotak bulat */
+    background-color: #FFFFFF; /* Warna latar belakang kotak */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan kotak jika diperlukan */
+}
+
+.service-box img {
+    width: 100px; /* Ukuran gambar */
+    height: 100px; /* Ukuran gambar */
+}
+
+footer {
+    background-color: #76C3EE;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center; /* Atur elemen footer agar rata tengah secara vertikal */
+}
+
+.footer-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    position: relative; /* Aktifkan posisi relatif */
+    margin-left: -55px;
+}
+
+.footer-logo img {
+    max-height: 120px; /* Ukuran maksimum logo */
+    width: auto; /* Pertahankan proporsi logo */
+    margin-top: -40px;
+}
+
+.footer-content p {
+    margin-top: -15px; /* Geser teks ke atas dengan margin negatif */
+    padding-top: 0; 
+}
+
+.footer-contact {
+    width: 40%;
+}
+
+.footer-contact h3 {
+    margin-top: 0;
+}
+
+.footer-contact p,
+.footer-contact a {
+    color: #000;
+    text-decoration: none;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
