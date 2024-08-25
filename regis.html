@@ -15,6 +15,7 @@
         <div class="form-section">
             <form action="register.php" method="post">
                 <h2>Daftar Akun</h2>
+                
                 <label for="name">Nama Lengkap</label>
                 <input type="text" id="name" name="name" required>
                 
@@ -27,6 +28,13 @@
                 <label for="confirm-password">Ulangi Password</label>
                 <input type="password" id="confirm-password" name="confirm-password" required>
                 
+                <label for="admin-type">Jenis Admin</label>
+                <select id="admin-type" name="admin-type" required>
+                    <option value="">Pilih Jenis Admin</option>
+                    <option value="pusat">Admin Pusat</option>
+                    <option value="bidang">Admin Bidang</option>
+                </select>
+
                 <button type="submit">Daftar</button>
                 <p>Sudah punya akun? <a href="login.html">Login sekarang</a></p>
             </form>
