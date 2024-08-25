@@ -19,14 +19,14 @@
                 <h2>SISTEM INFORMASI ARSIP KESEHATAN</h2>
             </div>
             <div class="menu">
-                <button>Sekretariat</button>
-                <button>Kesehatan Masyarakat</button>
-                <button>Pencegahan dan Pengendalian Penyakit</button>
-                <button>Pelayanan Kesehatan</button>
-                <button>Sumber Daya Kesehatan</button>
+                <button id="btn-sekretariat">Sekretariat</button>
+                <button id="btn-kesmas">Kesehatan Masyarakat</button>
+                <button id="btn-pp">Pencegahan dan Pengendalian Penyakit</button>
+                <button id="btn-yankes">Pelayanan Kesehatan</button>
+                <button id="btn-sdmk">Sumber Daya Kesehatan</button>
             </div>
             <div class="logout">
-                <button>logout</button>
+                <button id="logout-button">Logout</button>
             </div>
         </div>
         <div class="main-content">
@@ -36,8 +36,6 @@
                     <label for="sub-bagian">Sub Bagian</label>
                     <select id="sub-bagian">
                         <option>-- Pilih Sub Bagian --</option>
-                        <option value="1">Sub Bagian 1</option>
-                        <option value="2">Sub Bagian 2</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -45,18 +43,86 @@
                     <input type="text" id="jenis-surat">
                 </div>
                 <div class="form-group">
-                    <label for="nama-surat">Nama Surat</label>
-                    <input type="text" id="nama-surat">
-                </div>
-                <div class="form-group">
                     <label for="tanggal-upload">Tanggal Upload</label>
-                    <input type="date" id="tanggal-upload">
+                    <input type="text" id="tanggal-upload" placeholder="DD-MM-YYYY">
                 </div>
                 <div class="form-group">
-                    <button class="search-btn">Cari</button>
+                    <button id="cari-button" class="search-btn">Cari</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        const buttons = document.querySelectorAll('.menu button');
+        const subBagianSelect = document.getElementById('sub-bagian');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Hapus kelas 'active' dari semua tombol
+                buttons.forEach(btn => btn.classList.remove('active'));
+
+                // Tambahkan kelas 'active' ke tombol yang diklik
+                this.classList.add('active');
+
+                // Tampilkan pilihan sub bagian berdasarkan bidang yang dipilih
+                let subBagianOptions = '';
+                switch (this.id) {
+                    case 'btn-sekretariat':
+                        subBagianOptions = `
+                            <option value="1">Umum dan Kepegawaian</option>
+                            <option value="2">Perencana Ahli Muda (Sub Koordinator Subbag Perencanaan dan Evaluasi)</option>
+                            <option value="3">Analis Kebijakan Muda (Sub Koordinator Subbag Keuangan dan Aset)</option>`;
+                        break;
+                    case 'btn-kesmas':
+                        subBagianOptions = `
+                            <option value="1">Pelayanan Kesehatan Primer</option>
+                            <option value="2">Pelayanan Kesehatan Rujukan</option>
+                            <option value="3">Administrator Kesehatan Ahli Muda (Sub Koordinator Seksi Pembiayaan dan Jaminan Kesehatan)</option>`;
+                        break;
+                    case 'btn-pp':
+                        subBagianOptions = `
+                            <option value="1">Surveilans dan Imunisasi</option>
+                            <option value="2">Epidemiolog Kesehatan Ahli Muda (Sub Koordinator Seksi Pengendalian Penyakit Tidak Menular)</option>
+                            <option value="3">Pencegahan dan Pengendalian Penyakit Menular</option>
+                            <option value="4">Penyuluh Kesehatan Masyarakat Ahli Muda (Sub Koordinator Seksi Kesehatan Lingkungan, Kesehatan Kerja dan Olahraga)</option>`;
+                        break;
+                    case 'btn-yankes':
+                        subBagianOptions = `
+                            <option value="1">Promosi Kesehatan dan Pemberdayaan Masyarakat</option>
+                            <option value="2">Kesga dan Gizi Masyarakat</option>
+                            <option value="3">Administrator Kesehatan Ahli Muda (Sub Koordinator Seksi Pelayanan Kesehatan Tradisional)</option>`;
+                        break;
+                    case 'btn-sdmk':
+                        subBagianOptions = `
+                            <option value="1">Kefarmasian dan Alat Kesehatan</option>
+                            <option value="2">Sumber Daya Manusia Kesehatan</option>`;
+                        break;
+                }
+                subBagianSelect.innerHTML = `<option>-- Pilih Sub Bagian --</option>` + subBagianOptions;
+            });
+        });
+
+        // Menangani klik pada tombol logout
+        document.getElementById('logout-button').addEventListener('click', function () {
+            window.location.href = 'http://127.0.0.1:5500/home.html'; // Ganti dengan URL halaman Home Anda
+        });
+
+        // Menangani klik pada tombol Cari dengan validasi
+        document.getElementById('cari-button').addEventListener('click', function () {
+            const subBagian = document.getElementById('sub-bagian').value;
+            const jenisSurat = document.getElementById('jenis-surat').value;
+            const namaSurat = document.getElementById('nama-surat').value;
+            const tanggalUpload = document.getElementById('tanggal-upload').value;
+
+            // Validasi: pastikan semua field diisi
+            if (subBagian && jenisSurat && namaSurat && tanggalUpload) {
+                window.location.href = 'http://127.0.0.1:5500/datasurat.html'; // Ganti dengan URL halaman Data Surat Anda
+            } else {
+                alert('Harap isi semua field sebelum melakukan pencarian.');
+            }
+        });
+
+    </script>
 </body>
 </html>
